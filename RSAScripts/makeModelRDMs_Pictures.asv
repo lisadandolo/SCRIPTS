@@ -44,18 +44,18 @@ B = zeros(60);
 
 C = 0.5 * ones(60);
 
-D = 0.2 * ones(60);
+D = 0.05 * ones(60);
 D(1:60+1:end) = 0;
 
-E = ones(60);
-E(1:60+1:end) = 0.5;
+E = 0.5 * ones(60);
+D(1:60+1:end) = 0;
    
 Models.NovSimAreMoreComparable2 =   [D, A, A;
                                      A, D, C;
                                      A, C, D];
 
-Models.SomeTransformed =   [D, E, A;
-                            E, D, A;
+Models.SomeTransformed =   [D, A, A;
+                            A, D, A;
                             A, A, D];
 
 end
