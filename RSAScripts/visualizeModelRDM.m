@@ -14,3 +14,11 @@ RDMs_model = constructModelRDMs(makeModelRDMs_Pictures, userOptions);
 % Visualize the modelRDMs
 figureRDMs(RDMs_model, userOptions, struct('fileName', 'modelRDMs', 'figureNumber', 3));
 
+
+
+% Prepare the model RDMs.
+RDMs_model = constructModelRDMs(makeModelRDMs_basedOnBehavioralData, userOptions);
+
+
+% Visualize the modelRDMs
+figureRDMs(RDMs_model(25:48), userOptions, struct('fileName', 'modelRDMs', 'figureNumber', 3));
