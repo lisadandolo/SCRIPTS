@@ -1,4 +1,4 @@
-function Models = makeModelRDMs_basedOnBehavioralData()
+function Models = makeModelRDMs_basedOnBehavioralDataPairs()
 %  function which specifies the models which
 %  brain-region RDMs should be compared to
 
@@ -55,13 +55,7 @@ for sub = 1: size(folders_Behav, 1)
             end
         end
     end
-    
-    
-    
+ 
     Models.(folders_Behav(sub).name(1:5)) = ModelMatrix;
 end
-
-
-
-
 end
