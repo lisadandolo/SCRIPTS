@@ -17,8 +17,8 @@ figureRDMs(RDMs_model, userOptions, struct('fileName', 'modelRDMs', 'figureNumbe
 
 
 % Prepare the model RDMs.
-RDMs_model = constructModelRDMs(makeModelRDMs_basedOnBehavioralData, userOptions);
+RDMs_model = constructModelRDMs(makeModelRDMs_basedOnBehavioralData_VersionB, userOptions);
 
 
 % Visualize the modelRDMs
-figureRDMs(RDMs_model(1:24), userOptions, struct('fileName', 'modelRDMs', 'figureNumber', 3));
+figureRDMs(RDMs_model(25:48), userOptions, struct('fileName', 'modelRDMs', 'figureNumber', 3));
