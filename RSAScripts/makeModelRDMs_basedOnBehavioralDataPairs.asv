@@ -103,17 +103,20 @@ for sub = 1: size(folders_Behav, 1)
     
     ModelMatrix = zeros(trialNumber);
     
+    
+    
     for trials1 = 1:trialNumber
         for trials2 = 1 :trialNumber
-            
-            if trialsActivityPattern(trials1) ~= trialsActivityPattern(trials2) % if they are not the same than a 1
-                ModelMatrix(trials1,trials2) = 1;
-            end
-            
             if trialsActivityPattern(trials1) == 1 && trialsActivityPattern(trials2) == 2  % Pattern 1 + Pattern 2
                 ModelMatrix(trials1,trials2) = 0.5;
             elseif trialsActivityPattern(trials1) == 2 && trialsActivityPattern(trials2) == 1  % Pattern 1 + Pattern 2
                 ModelMatrix(trials1,trials2) = 0.5;
+                
+            elseif trialsActivityPattern(trials1) == 1 && trialsActivityPattern(trials2) == 3  % Pattern 1 + Pattern 3
+                ModelMatrix(trials1,trials2) = 1;
+            elseif trialsActivityPattern(trials1) == 3 && trialsActivityPattern(trials2) == 1  % Pattern 1 + Pattern 3
+                ModelMatrix(trials1,trials2) = 1;
+                
             elseif trialsActivityPattern(trials1) == 2 && trialsActivityPattern(trials2) == 3  % Pattern 2 + Pattern 3
                 ModelMatrix(trials1,trials2) = 0.5;
             elseif trialsActivityPattern(trials1) == 3 && trialsActivityPattern(trials2) == 2  % Pattern 2 + Pattern 3
